@@ -3,8 +3,9 @@ MAINTAINER sparklyballs
 
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
+ENV XDG_CONFIG_HOME="/config/xdg"
 
-# add sonarr repository
+# add sonarr repository
 RUN \
  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC && \
  echo "deb http://apt.sonarr.tv/ master main" > \
@@ -16,16 +17,16 @@ RUN \
 	libcurl3 \
 	nzbdrone && \
 
-# cleanup
+# cleanup
  apt-get clean && \
- rm -rfv \
+ rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
 
-# add local files
+# add local files
 COPY root/ /
 
-# ports and volumes
-VOLUME /config /downloads /tv
+# ports and volumes
 EXPOSE 8989
+VOLUME /config /downloads /tv
