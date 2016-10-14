@@ -11,8 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/sonarr
-
-[![](https://images.microbadger.com/badges/image/lsioarmhf/sonarr.svg)](http://microbadger.com/images/lsioarmhf/sonarr "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/sonarr.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/sonarr.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-sonarr)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-sonarr/)
+[![](https://images.microbadger.com/badges/version/lsioarmhf/sonarr.svg)](https://microbadger.com/images/lsioarmhf/sonarr "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/sonarr.svg)](http://microbadger.com/images/lsioarmhf/sonarr "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/sonarr.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/sonarr.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-sonarr)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-sonarr/)
 [hub]: https://hub.docker.com/r/lsioarmhf/sonarr/
 
 [Sonarr](https://sonarr.tv/) (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
@@ -63,8 +62,18 @@ Access the webui at `<your-ip>:8989`, for more information check out [Sonarr](ht
 
 * Monitor the logs of the container in realtime `docker logs -f sonarr`.
 
-## Changelog
+* container version number 
 
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' sonarr`
+
+* image version number
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' lsioarmhf/sonarr`
+
+
+## Versions
+
++ **14-10-16:** Add version layer information.
 + **30.09.16:** Fix umask.
 + **23.09.16:** Add cd to /opt fixes redirects with althub (issue #25 on x86 repo)
 , make XDG config environment variable
