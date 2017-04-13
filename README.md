@@ -79,6 +79,7 @@ Access the webui at `<your-ip>:8989`, for more information check out [Sonarr](ht
 
 ## Versions
 
++ **13.04.17:** Switch to official mono repository.
 + **14.10.16:** Add version layer information.
 + **30.09.16:** Fix umask.
 + **23.09.16:** Add cd to /opt fixes redirects with althub (issue #25 on x86 repo)
