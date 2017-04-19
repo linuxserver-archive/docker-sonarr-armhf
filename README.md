@@ -32,6 +32,13 @@ docker create \
 	lsioarmhf/sonarr
 ```
 
+You can choose between ,using tags, various branch versions of sonarr, no tag is required to remain on the main branch.
+
+Add one of the tags,  if required,  to the linuxserver/sonarr line of the run/create command in the following format, linuxserver/sonarr:develop
+
+#### Tags
++ **develop**
+
 ## Parameters
 
 `The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
@@ -79,6 +86,7 @@ Access the webui at `<your-ip>:8989`, for more information check out [Sonarr](ht
 
 ## Versions
 
++ **19.04.17:** Switch to using inhouse mono baseimage, adds python also.
 + **14.10.16:** Add version layer information.
 + **30.09.16:** Fix umask.
 + **23.09.16:** Add cd to /opt fixes redirects with althub (issue #25 on x86 repo)

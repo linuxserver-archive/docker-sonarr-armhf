@@ -1,4 +1,4 @@
-FROM lsiobase/xenial.armhf
+FROM lsiobase/mono.armhf
 MAINTAINER sparklyballs
 
 # set version label
@@ -19,7 +19,6 @@ RUN \
 # install packages
  apt-get update && \
  apt-get install -y \
-	libcurl3 \
 	nzbdrone && \
 
 # cleanup
