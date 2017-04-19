@@ -31,6 +31,12 @@ docker create \
 	-v <path/to/downloadclient-downloads>:/downloads \
 	lsioarmhf/sonarr
 ```
+You can choose between ,using tags, various branch versions of sonarr, no tag is required to remain on the main branch.
+
+Add one of the tags,  if required,  to the linuxserver/sonarr line of the run/create command in the following format, linuxserver/sonarr:develop
+
+#### Tags
++ **develop**
 
 ## Parameters
 
