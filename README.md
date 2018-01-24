@@ -85,6 +85,7 @@ Access the webui at `<your-ip>:8989`, for more information check out [Sonarr](ht
 
 ## Versions
 
++ **24.01.18:** Fix continuation lines.
 + **19.04.17:** Switch to using inhouse mono baseimage, adds python also.
 + **14.10.16:** Add version layer information.
 + **30.09.16:** Fix umask.
