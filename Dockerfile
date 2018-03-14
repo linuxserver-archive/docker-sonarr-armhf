@@ -1,4 +1,4 @@
-FROM lsiobase/mono.armhf
+FROM lsiobase/mono.armhf:xenial
 
 # set version label
 ARG BUILD_DATE
